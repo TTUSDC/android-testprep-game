@@ -1,0 +1,117 @@
+package org.sdc.ttu.sdc_test_game_app.view;
+
+import android.app.ProgressDialog;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+
+import org.sdc.ttu.sdc_test_game_app.R;
+import org.sdc.ttu.sdc_test_game_app.presenter.LoginPresenter;
+import org.sdc.ttu.sdc_test_game_app.presenter.interfaces.LoginInterface;
+
+
+
+import butterknife.BindString;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+
+/**
+ * A login screen that offers login via email/password.
+ */
+public class LoginActivity extends AppCompatActivity implements LoginInterface.View {
+
+
+
+    private LoginPresenter mPresenter;
+    private ProgressDialog mProgressDialog;
+
+    @BindView(R.id.input_username) EditText inputUsername;
+    @BindView(R.id.input_password) EditText inputPassword;
+
+    @BindString(R.string.login_progress_text) String mProgressText;
+    @BindString(R.string.login_incorrect_username) String mIncorrectUsernameText;
+    @BindString(R.string.login_incorrect_password) String mIncorrectPasswordText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
+
+        // Set up progress bar
+        mProgressDialog = new ProgressDialog(this,
+                R.style.AppTheme_Light_Dialog);
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.setMessage(mProgressText);
+
+        // Instantiate LoginPresenter
+        mPresenter = new LoginPresenter(this, this);
+
+    }
+
+
+
+
+
+    @Override
+    public void showProgressBar(boolean show) {
+
+        if (show) {
+            mProgressDialog.show();
+        } else {
+            mProgressDialog.hide();
+        }
+
+
+    }
+
+
+    @Override
+    public void showIncorrectUsername(boolean show) {
+        if (show) {
+            inputUsername.setError(mIncorrectUsernameText);
+        } else {
+            inputUsername.setError(null);
+        }
+    }
+
+    @Override
+    public void showIncorrectPassword(boolean show) {
+
+        if (show) {
+            inputPassword.setError(mIncorrectPasswordText);
+        } else {
+            inputPassword.setError(null);
+        }
+    }
+
+    @Override
+    public void startMain() {
+        Intent mainIntent = new Intent(this, MainActivity.class);
+        startActivity(mainIntent);
+        finish();
+    }
+
+
+    @OnClick(R.id.button_login)
+    public void onLoginClick(View view) {
+        String username = inputUsername.getText().toString();
+        String password = inputPassword.getText().toString();
+        mPresenter.login(username, password);
+    }
+
+    @OnClick(R.id.text_create_account)
+    public void onCreateAccountClick(View view) {
+    }
+}
+

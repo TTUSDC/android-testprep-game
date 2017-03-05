@@ -1,0 +1,19 @@
+<resources>
+
+    <!--Strings related to entire application-->
+    <string name="app_name">sdc-test-game-app</string>
+
+    <!-- Strings related to login -->
+    <string name="login_hint_input_username">Email or Username</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_button_text">Login</string>
+    <string name="login_create_account_text">No account yet? <u>Create one</u></string>
+    <string name="login_progress_text">Loggin in...</string>
+    <string name="login_incorrect_username">Username is incorrect</string>
+    <string name="login_incorrect_password">Password is incorrect</string>
+
+    <!--Strings related to create account-->
+    <string name="login_invalid_email">Email or Username is invalid</string>
+    <string name="login_invalid_password">Invalid Password</string>
+
+</resources>
