@@ -12,7 +12,6 @@ import android.widget.EditText;
 
 
 import org.sdc.ttu.sdc_test_game_app.R;
-import org.sdc.ttu.sdc_test_game_app.view.BottomAppBarBaseActivity;
 
 
 import butterknife.BindString;
