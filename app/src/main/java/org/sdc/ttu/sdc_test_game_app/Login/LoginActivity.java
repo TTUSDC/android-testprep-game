@@ -2,9 +2,9 @@ package org.sdc.ttu.sdc_test_game_app.Login;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import org.sdc.ttu.sdc_test_game_app.BaseActivity;
 import org.sdc.ttu.sdc_test_game_app.R;
 import butterknife.BindString;
 import butterknife.BindView;
@@ -13,7 +13,7 @@ import butterknife.OnClick;
 
 
 
-public class LoginActivity extends AppCompatActivity implements LoginInterface.View {
+public class LoginActivity extends BaseActivity implements LoginInterface.View {
 
     private LoginPresenter mPresenter;
     private ProgressDialog mProgressDialog;
