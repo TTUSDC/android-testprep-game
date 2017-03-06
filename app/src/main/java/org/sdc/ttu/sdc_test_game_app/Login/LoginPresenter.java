@@ -1,25 +1,10 @@
-package org.sdc.ttu.sdc_test_game_app.presenter;
+package org.sdc.ttu.sdc_test_game_app.Login;
 
-import android.app.ProgressDialog;
-import android.content.ContentValues;
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import org.sdc.ttu.sdc_test_game_app.R;
-import org.sdc.ttu.sdc_test_game_app.presenter.interfaces.LoginInterface;
-
-import butterknife.BindString;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-/**
- * Created by Dane Lowrey on 3/4/2017.
- */
 
 public class LoginPresenter implements LoginInterface.Presenter {
-
 
     private Context mContext;
     private LoginInterface.View mLoginView;
@@ -28,9 +13,6 @@ public class LoginPresenter implements LoginInterface.Presenter {
         mContext = context;
         mLoginView = loginView;
     }
-
-
-
 
     /**
      * Attempt to log in with user credentials
@@ -52,7 +34,4 @@ public class LoginPresenter implements LoginInterface.Presenter {
 
 
     }
-
-
-
 }
