@@ -1,18 +1,7 @@
-package org.sdc.ttu.sdc_test_game_app.presenter;
+package org.sdc.ttu.sdc_test_game_app.Login;
 
-import android.app.ProgressDialog;
-import android.content.ContentValues;
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import org.sdc.ttu.sdc_test_game_app.R;
-import org.sdc.ttu.sdc_test_game_app.presenter.interfaces.LoginInterface;
-
-import butterknife.BindString;
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 
 public class LoginPresenter implements LoginInterface.Presenter {

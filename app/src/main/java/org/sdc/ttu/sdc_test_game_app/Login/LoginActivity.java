@@ -1,4 +1,4 @@
-package org.sdc.ttu.sdc_test_game_app.view;
+package org.sdc.ttu.sdc_test_game_app.Login;
 
 import android.app.ProgressDialog;
 
@@ -8,15 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 
 import org.sdc.ttu.sdc_test_game_app.R;
-import org.sdc.ttu.sdc_test_game_app.presenter.LoginPresenter;
-import org.sdc.ttu.sdc_test_game_app.presenter.interfaces.LoginInterface;
-
+import org.sdc.ttu.sdc_test_game_app.view.BottomAppBarBaseActivity;
 
 
 import butterknife.BindString;
@@ -95,9 +91,9 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
 
     @Override
     public void startMain() {
-        Intent mainIntent = new Intent(this, MainActivity.class);
-        startActivity(mainIntent);
-        finish();
+//        Intent intent = new Intent(this, /*Class to start here*/);
+//        startActivity(intent);
+//        finish();
     }
 
 

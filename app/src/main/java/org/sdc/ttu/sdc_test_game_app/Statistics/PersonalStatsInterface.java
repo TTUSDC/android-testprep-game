@@ -1,4 +1,4 @@
-package org.sdc.ttu.sdc_test_game_app.presenter.interfaces;
+package org.sdc.ttu.sdc_test_game_app.Statistics;
 
 
 public interface PersonalStatsInterface {

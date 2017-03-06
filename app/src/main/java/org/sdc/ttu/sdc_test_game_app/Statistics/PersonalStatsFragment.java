@@ -1,8 +1,8 @@
-package org.sdc.ttu.sdc_test_game_app.view;
+package org.sdc.ttu.sdc_test_game_app.Statistics;
 
 import android.app.Fragment;
 
-import org.sdc.ttu.sdc_test_game_app.presenter.interfaces.PersonalStatsInterface;
+import org.sdc.ttu.sdc_test_game_app.Statistics.PersonalStatsInterface;
 
 
 
