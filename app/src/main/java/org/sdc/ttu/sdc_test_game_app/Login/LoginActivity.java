@@ -1,19 +1,11 @@
 package org.sdc.ttu.sdc_test_game_app.Login;
 
 import android.app.ProgressDialog;
-
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-
 import android.os.Bundle;
-
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-
-
 import org.sdc.ttu.sdc_test_game_app.R;
-
-
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,14 +15,11 @@ import butterknife.OnClick;
 
 public class LoginActivity extends AppCompatActivity implements LoginInterface.View {
 
-
-
     private LoginPresenter mPresenter;
     private ProgressDialog mProgressDialog;
 
     @BindView(R.id.input_username) EditText inputUsername;
     @BindView(R.id.input_password) EditText inputPassword;
-
     @BindString(R.string.login_progress_text) String mProgressText;
     @BindString(R.string.login_incorrect_username) String mIncorrectUsernameText;
     @BindString(R.string.login_incorrect_password) String mIncorrectPasswordText;
@@ -52,10 +41,6 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
 
     }
 
-
-
-
-
     @Override
     public void showProgressBar(boolean show) {
 
@@ -67,7 +52,6 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
 
 
     }
-
 
     @Override
     public void showIncorrectUsername(boolean show) {
@@ -94,7 +78,6 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
 //        startActivity(intent);
 //        finish();
     }
-
 
     @OnClick(R.id.button_login)
     public void onLoginClick(View view) {

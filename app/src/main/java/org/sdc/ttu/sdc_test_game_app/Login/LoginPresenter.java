@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 
 public class LoginPresenter implements LoginInterface.Presenter {
 
-
     private Context mContext;
     private LoginInterface.View mLoginView;
 
@@ -14,9 +13,6 @@ public class LoginPresenter implements LoginInterface.Presenter {
         mContext = context;
         mLoginView = loginView;
     }
-
-
-
 
     /**
      * Attempt to log in with user credentials
@@ -38,7 +34,4 @@ public class LoginPresenter implements LoginInterface.Presenter {
 
 
     }
-
-
-
 }

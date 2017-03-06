@@ -7,7 +7,6 @@ public interface PersonalStatsInterface {
 
     }
 
-
     interface Presenter {
 
     }
