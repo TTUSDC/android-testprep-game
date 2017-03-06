@@ -25,9 +25,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-/**
- * A login screen that offers login via email/password.
- */
+
 public class LoginActivity extends AppCompatActivity implements LoginInterface.View {
 
 

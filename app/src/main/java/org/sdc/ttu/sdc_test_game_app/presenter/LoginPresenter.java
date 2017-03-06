@@ -14,9 +14,6 @@ import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by Dane Lowrey on 3/4/2017.
- */
 
 public class LoginPresenter implements LoginInterface.Presenter {
 
