@@ -11,9 +11,12 @@
     <string name="login_progress_text">Loggin in...</string>
     <string name="login_incorrect_username">Username is incorrect</string>
     <string name="login_incorrect_password">Password is incorrect</string>
-
     <!--Strings related to create account-->
     <string name="login_invalid_email">Email or Username is invalid</string>
     <string name="login_invalid_password">Invalid Password</string>
+    <string name="createAccount_hint_first_name">First Name</string>
+    <string name="createAccount_hint_last_name">Last Name</string>
+    <string name="createAccount_hint_username">Username</string>
+
 
 </resources>
