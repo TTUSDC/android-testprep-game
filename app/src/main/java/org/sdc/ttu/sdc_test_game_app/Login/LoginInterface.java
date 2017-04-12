@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 
 
-public interface LoginInterface {
+interface LoginInterface {
 
     interface View{
 
