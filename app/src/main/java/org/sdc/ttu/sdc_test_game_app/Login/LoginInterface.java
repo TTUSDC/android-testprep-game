@@ -1,9 +1,8 @@
 package org.sdc.ttu.sdc_test_game_app.Login;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-
-
 
 public interface LoginInterface {
 
@@ -18,7 +17,7 @@ public interface LoginInterface {
     interface Presenter{
 
         void login(@NonNull String username, @NonNull String password);
-        void createActivity(Intent activity);
+        void createActivity(Context context);
 
 
     }

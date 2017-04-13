@@ -2,6 +2,7 @@ package org.sdc.ttu.sdc_test_game_app.CreateAccount;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
 
 import org.sdc.ttu.sdc_test_game_app.BaseActivity;
@@ -12,18 +13,17 @@ import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by lamsa on 4/5/2017.
- */
+public class CreateAccountActivity extends BaseActivity implements CreateAccountInterface.View {
 
-public class CreateAccountActivity extends BaseActivity {
-
-    private LoginPresenter mPresenter;
+    private CreateAccountPresenter mPresenter;
     private ProgressDialog mProgressDialog;
 
-    @BindView(R.id.firstName) String mfirstName;
-    @BindView(R.id.lastName) String mlastName;
-    @BindView(R.id.username) String mUsername;
+    @BindView(R.id.firstName)
+    Button mFirstName;
+    @BindView(R.id.lastName)
+    Button mLastName;
+    @BindView(R.id.username)
+    Button mUsername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +37,18 @@ public class CreateAccountActivity extends BaseActivity {
         mProgressDialog.setIndeterminate(true);
 
 
-        // Instantiate LoginPresenter
+        // Instantiate CreateAccountPresenter
+        mPresenter = new CreateAccountPresenter(this, this);
 
+    }
+
+    @Override
+    public void showIncorrectUsername(boolean show) {
+
+    }
+
+    @Override
+    public void showIncorrectPassword(boolean show) {
 
     }
 }

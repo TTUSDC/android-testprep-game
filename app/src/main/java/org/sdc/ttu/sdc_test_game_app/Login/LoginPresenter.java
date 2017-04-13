@@ -1,7 +1,10 @@
 package org.sdc.ttu.sdc_test_game_app.Login;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+
+import org.sdc.ttu.sdc_test_game_app.CreateAccount.CreateAccountActivity;
 
 
 public class LoginPresenter implements LoginInterface.Presenter {
@@ -33,5 +36,10 @@ public class LoginPresenter implements LoginInterface.Presenter {
         mLoginView.startMain();
 
 
+    }
+
+    @Override
+    public void createActivity(Context context) {
+        Intent createIntent = new Intent(context, CreateAccountActivity.class);
     }
 }

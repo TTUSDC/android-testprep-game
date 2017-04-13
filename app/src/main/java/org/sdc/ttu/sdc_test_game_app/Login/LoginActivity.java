@@ -90,8 +90,7 @@ public class LoginActivity extends BaseActivity implements LoginInterface.View {
 
     @OnClick(R.id.text_create_account)
     public void onCreateAccountClick(View view) {
-        Intent createAccount = new Intent(this, CreateAccountActivity.class);
-        mPresenter.createActivity(createAccount);
+        mPresenter.createActivity(this);
     }
 }
 

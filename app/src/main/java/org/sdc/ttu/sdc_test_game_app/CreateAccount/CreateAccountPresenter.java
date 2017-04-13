@@ -1,8 +1,18 @@
 package org.sdc.ttu.sdc_test_game_app.CreateAccount;
 
-/**
- * Created by lamsa on 4/5/2017.
- */
+import android.content.Context;
+import android.support.annotation.NonNull;
+
+import org.sdc.ttu.sdc_test_game_app.Login.LoginInterface;
 
 public class CreateAccountPresenter {
+
+    private Context mContext;
+    private CreateAccountInterface.View mCreateAccountView;
+
+    public CreateAccountPresenter(Context context, @NonNull CreateAccountInterface.View createAccountView) {
+        mContext = context;
+        mCreateAccountView = createAccountView;
+    }
+
 }
