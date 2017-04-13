@@ -4,12 +4,12 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 
-public class LoginPresenter implements LoginInterface.Presenter {
+class LoginPresenter implements LoginInterface.Presenter {
 
     private Context mContext;
     private LoginInterface.View mLoginView;
 
-    public LoginPresenter(Context context, @NonNull LoginInterface.View loginView) {
+    LoginPresenter(Context context, @NonNull LoginInterface.View loginView) {
         mContext = context;
         mLoginView = loginView;
     }
@@ -20,7 +20,7 @@ public class LoginPresenter implements LoginInterface.Presenter {
      * @param password user's password
      */
     @Override
-    public void login(String username, String password) {
+    public void login(@NonNull String username, @NonNull String password) {
 
         // Show a progress bar
         mLoginView.showProgressBar(true);
