@@ -3,8 +3,6 @@ package org.sdc.ttu.sdc_test_game_app.CreateAccount;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import org.sdc.ttu.sdc_test_game_app.Login.LoginInterface;
-
 public class CreateAccountPresenter {
 
     private Context mContext;

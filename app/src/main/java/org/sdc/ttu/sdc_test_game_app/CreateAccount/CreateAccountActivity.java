@@ -3,13 +3,8 @@ package org.sdc.ttu.sdc_test_game_app.CreateAccount;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
-
 import org.sdc.ttu.sdc_test_game_app.BaseActivity;
-import org.sdc.ttu.sdc_test_game_app.Login.LoginPresenter;
 import org.sdc.ttu.sdc_test_game_app.R;
-
-import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
