@@ -3,7 +3,7 @@ package org.sdc.ttu.sdc_test_game_app.CreateAccount;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-public class CreateAccountPresenter {
+public class CreateAccountPresenter implements CreateAccountInterface.Presenter {
 
     private Context mContext;
     private CreateAccountInterface.View mCreateAccountView;
@@ -13,4 +13,9 @@ public class CreateAccountPresenter {
         mCreateAccountView = createAccountView;
     }
 
+
+    @Override
+    public void createAccount(String firstName, String String, String userName, String password) {
+        //TODO: authenticate the user
+    }
 }

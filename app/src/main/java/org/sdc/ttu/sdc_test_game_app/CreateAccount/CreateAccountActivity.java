@@ -2,11 +2,15 @@ package org.sdc.ttu.sdc_test_game_app.CreateAccount;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
 import org.sdc.ttu.sdc_test_game_app.BaseActivity;
 import org.sdc.ttu.sdc_test_game_app.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class CreateAccountActivity extends BaseActivity implements CreateAccountInterface.View {
 
@@ -14,11 +18,14 @@ public class CreateAccountActivity extends BaseActivity implements CreateAccount
     private ProgressDialog mProgressDialog;
 
     @BindView(R.id.firstName)
-    Button mFirstName;
+    EditText mFirstName;
     @BindView(R.id.lastName)
-    Button mLastName;
+    EditText mLastName;
+    @BindView(R.id.password)
+    EditText mPassword;
     @BindView(R.id.username)
-    Button mUsername;
+    EditText mUsername;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,4 +53,15 @@ public class CreateAccountActivity extends BaseActivity implements CreateAccount
     public void showIncorrectPassword(boolean show) {
 
     }
+
+    @OnClick(R.id.create_account_button)
+    public void onCreateAccountClick(View view) {
+        String firstName = mFirstName.getText().toString();
+        String lastName = mLastName.getText().toString();
+        String userName = mUsername.getText().toString();
+        String password = mPassword.getText().toString();
+        mPresenter.createAccount(firstName, lastName, userName, password);
+    }
+
+
 }
