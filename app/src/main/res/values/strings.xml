@@ -16,4 +16,11 @@
     <string name="login_invalid_email">Email or Username is invalid</string>
     <string name="login_invalid_password">Invalid Password</string>
 
+    <!--Strings related to select categories-->
+    <string name="random">Random</string>
+    <string name="science">Science</string>
+    <string name="math">Math</string>
+    <string name="etc">ETC</string>
+    <string name="categories">Categories</string>
+
 </resources>
