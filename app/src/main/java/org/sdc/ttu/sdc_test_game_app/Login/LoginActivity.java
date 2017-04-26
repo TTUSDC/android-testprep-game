@@ -11,8 +11,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-
-
 public class LoginActivity extends BaseActivity implements LoginInterface.View {
 
     private LoginPresenter mPresenter;
