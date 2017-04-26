@@ -32,5 +32,4 @@ dependencies {
     // ButterKnife for easy ViewBinding [http://jakewharton.github.io/butterknife/]
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-
 }
