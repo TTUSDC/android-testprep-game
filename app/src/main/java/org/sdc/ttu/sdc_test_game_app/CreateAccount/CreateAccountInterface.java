@@ -8,7 +8,7 @@ public interface CreateAccountInterface {
     }
 
     interface Presenter {
-        void createAccount(String firstName, String lastName, String userName, String password);
+        void createAccount(String firstName, String lastName, String userName, String email, String password);
         // Presenter methods are prototyped here and defined in the View activity
     }
 }
