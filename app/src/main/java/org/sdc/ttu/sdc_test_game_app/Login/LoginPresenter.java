@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 
+import org.sdc.ttu.sdc_test_game_app.CreateAccount.CreateAccountActivity;
+
 
 class LoginPresenter implements LoginInterface.Presenter {
 
@@ -48,7 +50,7 @@ class LoginPresenter implements LoginInterface.Presenter {
     }
 
     @Override
-    public void startHomeScreenActivity() {
+    public void startCreateAccountActivity() {
         // Start the home screen activity
         Intent createAccountIntent = new Intent(mContext, CreateAccountActivity.class);
         mContext.startActivity(createAccountIntent);
