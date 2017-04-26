@@ -1,16 +1,20 @@
 package org.sdc.ttu.sdc_test_game_app.Login;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 
 
 class LoginPresenter implements LoginInterface.Presenter {
 
     private Context mContext;
+    private Activity mActivity;
     private LoginInterface.View mLoginView;
 
     LoginPresenter(Context context, @NonNull LoginInterface.View loginView) {
         mContext = context;
+        mActivity = (Activity)context;
         mLoginView = loginView;
     }
 
@@ -30,8 +34,25 @@ class LoginPresenter implements LoginInterface.Presenter {
         // mLoginView.showIncorrectPassword(false);
 
         mLoginView.showProgressBar(false);
-        mLoginView.startMain();
-
+        startHomeScreenActivity();
 
     }
+
+    @Override
+    public void startHomeScreenActivity() {
+        // Start the home screen activity
+        Intent homeActivityIntent = new Intent(mContext, HomeScreenActivity.class);
+        mContext.startActivity(homeActivityIntent);
+        // Finish the LoginActivity
+        mActivity.finish();
+    }
+
+    @Override
+    public void startHomeScreenActivity() {
+        // Start the home screen activity
+        Intent createAccountIntent = new Intent(mContext, CreateAccountActivity.class);
+        mContext.startActivity(createAccountIntent);
+
+    }
+
 }
