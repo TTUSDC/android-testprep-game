@@ -25,12 +25,14 @@ public class CreateAccountActivity extends BaseActivity implements CreateAccount
     EditText mPassword;
     @BindView(R.id.username)
     EditText mUsername;
+    @BindView(R.id.email)
+    EditText mEmail;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_create_account);
         ButterKnife.bind(this);
 
         // Set up progress bar
@@ -60,7 +62,8 @@ public class CreateAccountActivity extends BaseActivity implements CreateAccount
         String lastName = mLastName.getText().toString();
         String userName = mUsername.getText().toString();
         String password = mPassword.getText().toString();
-        mPresenter.createAccount(firstName, lastName, userName, password);
+        String email = mEmail.getText().toString();
+        mPresenter.createAccount(firstName, lastName, userName, email, password);
     }
 
 
