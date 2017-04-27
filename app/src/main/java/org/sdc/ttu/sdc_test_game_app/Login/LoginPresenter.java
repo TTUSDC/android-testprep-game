@@ -30,13 +30,13 @@ class LoginPresenter implements LoginInterface.Presenter {
     public void login(@NonNull String username, @NonNull String password) {
 
         // Show a progress bar
-        mLoginView.showProgressBar(true);
+//        mLoginView.showProgressBar(true);
 
         // TODO: attempt an actual login credentials validation
         // mLoginView.showIncorrectUsername(false);
         // mLoginView.showIncorrectPassword(false);
 
-        mLoginView.showProgressBar(false);
+//        mLoginView.showProgressBar(false);
         startHomeScreenActivity();
 
     }
@@ -46,8 +46,8 @@ class LoginPresenter implements LoginInterface.Presenter {
         // Start the home screen activity
         Intent homeActivityIntent = new Intent(mContext, HomeScreenActivity.class);
         mContext.startActivity(homeActivityIntent);
-        // Finish the LoginActivity
-        mActivity.finish();
+//        mActivity.finish();
+
     }
 
     @Override
