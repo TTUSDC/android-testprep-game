@@ -11,7 +11,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-
 public class LoginActivity extends BaseActivity implements LoginInterface.View {
 
     private LoginPresenter mPresenter;
@@ -71,13 +70,6 @@ public class LoginActivity extends BaseActivity implements LoginInterface.View {
         }
     }
 
-    @Override
-    public void startMain() {
-//        Intent intent = new Intent(this, /*Class to start here*/);
-//        startActivity(intent);
-//        finish();
-    }
-
     @OnClick(R.id.button_login)
     public void onLoginClick(View view) {
         String username = inputUsername.getText().toString();
@@ -87,7 +79,7 @@ public class LoginActivity extends BaseActivity implements LoginInterface.View {
 
     @OnClick(R.id.text_create_account)
     public void onCreateAccountClick(View view) {
-        mPresenter.createActivity(this);
+        mPresenter.startCreateAccountActivity();
     }
 }
 
