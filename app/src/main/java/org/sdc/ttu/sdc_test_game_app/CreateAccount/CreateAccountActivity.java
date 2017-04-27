@@ -32,7 +32,7 @@ public class CreateAccountActivity extends BaseActivity implements CreateAccount
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_create_account);
         ButterKnife.bind(this);
 
         // Set up progress bar
