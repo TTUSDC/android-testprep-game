@@ -5,4 +5,14 @@ package org.sdc.ttu.sdc_test_game_app.Categories;
  */
 
 public interface CategoriesInterface {
+    interface View{
+
+    }
+
+    interface Presenter{
+        void Random();
+        void Science();
+        void Math();
+        void Etc();
+    }
 }
