@@ -1,10 +1,14 @@
 package org.sdc.ttu.sdc_test_game_app.Login;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.EditText;
 import org.sdc.ttu.sdc_test_game_app.BaseActivity;
+import org.sdc.ttu.sdc_test_game_app.HomeScreen.HomeScreenActivity;
 import org.sdc.ttu.sdc_test_game_app.R;
 import butterknife.BindString;
 import butterknife.BindView;
@@ -16,8 +20,8 @@ public class LoginActivity extends BaseActivity implements LoginInterface.View {
     private LoginPresenter mPresenter;
     private ProgressDialog mProgressDialog;
 
-    @BindView(R.id.input_username) EditText inputUsername;
-    @BindView(R.id.input_password) EditText inputPassword;
+    @BindView(R.id.input_username) TextInputEditText inputUsername;
+    @BindView(R.id.input_password) TextInputEditText inputPassword;
     @BindString(R.string.login_progress_text) String mProgressText;
     @BindString(R.string.login_incorrect_username) String mIncorrectUsernameText;
     @BindString(R.string.login_incorrect_password) String mIncorrectPasswordText;
@@ -36,7 +40,6 @@ public class LoginActivity extends BaseActivity implements LoginInterface.View {
 
         // Instantiate LoginPresenter
         mPresenter = new LoginPresenter(this, this);
-
     }
 
     @Override
@@ -47,8 +50,6 @@ public class LoginActivity extends BaseActivity implements LoginInterface.View {
         } else {
             mProgressDialog.hide();
         }
-
-
     }
 
     @Override
