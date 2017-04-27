@@ -17,7 +17,7 @@ public class CategoriesActivity extends BaseActivity implements CategoriesInterf
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_categories);
         mPresenter = new CategoriesPresenter(this, this);
     }
 
