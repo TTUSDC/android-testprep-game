@@ -12,12 +12,10 @@ import org.sdc.ttu.sdc_test_game_app.HomeScreen.HomeScreenActivity;
 class LoginPresenter implements LoginInterface.Presenter {
 
     private Context mContext;
-    private Activity mActivity;
     private LoginInterface.View mLoginView;
 
     LoginPresenter(Context context, @NonNull LoginInterface.View loginView) {
         mContext = context;
-        mActivity = (Activity)context;
         mLoginView = loginView;
     }
 
@@ -47,7 +45,6 @@ class LoginPresenter implements LoginInterface.Presenter {
         Intent homeActivityIntent = new Intent(mContext, HomeScreenActivity.class);
         mContext.startActivity(homeActivityIntent);
         // Finish the LoginActivity
-        mActivity.finish();
     }
 
     @Override
@@ -55,7 +52,6 @@ class LoginPresenter implements LoginInterface.Presenter {
         // Start the home screen activity
         Intent createAccountIntent = new Intent(mContext, CreateAccountActivity.class);
         mContext.startActivity(createAccountIntent);
-
     }
 
 }

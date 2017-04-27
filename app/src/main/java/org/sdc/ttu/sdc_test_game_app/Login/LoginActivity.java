@@ -36,7 +36,6 @@ public class LoginActivity extends BaseActivity implements LoginInterface.View {
 
         // Instantiate LoginPresenter
         mPresenter = new LoginPresenter(this, this);
-
     }
 
     @Override
@@ -47,8 +46,6 @@ public class LoginActivity extends BaseActivity implements LoginInterface.View {
         } else {
             mProgressDialog.hide();
         }
-
-
     }
 
     @Override
