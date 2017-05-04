@@ -7,7 +7,9 @@ public interface HomeScreenInterface {
     }
 
     interface Presenter{
-
+        void startHomeScreenActivity();
+        void startPracticeActivity();
+        void startPlayActivity();
     }
 
 }

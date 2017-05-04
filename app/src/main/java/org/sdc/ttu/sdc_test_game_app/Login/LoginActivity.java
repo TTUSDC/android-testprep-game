@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import org.sdc.ttu.sdc_test_game_app.BaseActivity;
@@ -15,7 +16,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class LoginActivity extends BaseActivity implements LoginInterface.View {
+public class LoginActivity extends AppCompatActivity implements LoginInterface.View {
 
     private LoginPresenter mPresenter;
     private ProgressDialog mProgressDialog;

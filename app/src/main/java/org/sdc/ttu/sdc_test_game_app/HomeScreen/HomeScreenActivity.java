@@ -1,12 +1,13 @@
 package org.sdc.ttu.sdc_test_game_app.HomeScreen;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.view.View;
 
 import org.sdc.ttu.sdc_test_game_app.BaseActivity;
 import org.sdc.ttu.sdc_test_game_app.R;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class HomeScreenActivity extends BaseActivity implements HomeScreenInterface.View{
 
@@ -20,6 +21,21 @@ public class HomeScreenActivity extends BaseActivity implements HomeScreenInterf
 
         // Instantiate LoginPresenter
         mPresenter = new HomeScreenPresenter(this, this);
+    }
+
+    @OnClick(R.id.home_button)
+    public void onHomeClick(View view) {
+        mPresenter.startHomeScreenActivity();
+    }
+
+    @OnClick(R.id.practice_button)
+    public void onPracticeClick(View view) {
+        mPresenter.startPracticeActivity();
+    }
+
+    @OnClick(R.id.play_button)
+    public void onPlayClick(View view) {
+        mPresenter.startPlayActivity();
     }
 
 }
