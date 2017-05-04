@@ -37,6 +37,12 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:hint="@string/create_account_hint_email" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:id="@+id/password"
             android:hint="@string/login_hint_password" />

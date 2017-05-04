@@ -15,7 +15,7 @@ public class CreateAccountPresenter implements CreateAccountInterface.Presenter 
 
 
     @Override
-    public void createAccount(String firstName, String String, String userName, String password) {
+    public void createAccount(String firstName, String string, String userName, String email, String password) {
         //TODO: authenticate the user
     }
 }

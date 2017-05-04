@@ -1,5 +1,6 @@
 package org.sdc.ttu.sdc_test_game_app.Login;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 
 
