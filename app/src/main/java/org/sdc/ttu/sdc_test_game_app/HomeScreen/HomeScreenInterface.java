@@ -10,6 +10,8 @@ public interface HomeScreenInterface {
         void startHomeScreenActivity();
         void startPracticeActivity();
         void startPlayActivity();
+        void startHelpActivity();
+        void startSettingsActivity();
     }
 
 }

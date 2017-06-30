@@ -5,8 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 
+import org.sdc.ttu.sdc_test_game_app.Help.HelpActivity;
 import org.sdc.ttu.sdc_test_game_app.Play.PlayActivity;
 import org.sdc.ttu.sdc_test_game_app.Practice.PracticeActivity;
+import org.sdc.ttu.sdc_test_game_app.Settings.SettingsActivity;
 
 public class HomeScreenPresenter implements HomeScreenInterface.Presenter {
 
@@ -41,6 +43,14 @@ public class HomeScreenPresenter implements HomeScreenInterface.Presenter {
     }
 
     @Override
+    public void startHelpActivity() {
+        // Start the help activity
+        Intent helpActivityIntent = new Intent(mContext, HelpActivity.class);
+        mContext.startActivity(helpActivityIntent);
+        mActivity.finish();
+    }
+
+    @Override
     public void startPlayActivity() {
         // Start the play activity
         Intent playActivityIntent = new Intent(mContext, PlayActivity.class);
@@ -48,6 +58,11 @@ public class HomeScreenPresenter implements HomeScreenInterface.Presenter {
         mActivity.finish();
     }
 
-
-
+    @Override
+    public void startSettingsActivity() {
+        // Start the settings activity
+        Intent playSettingsIntent = new Intent(mContext, SettingsActivity.class);
+        mContext.startActivity(playSettingsIntent);
+        mActivity.finish();
+    }
 }

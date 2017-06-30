@@ -38,4 +38,14 @@ public class HomeScreenActivity extends BaseActivity implements HomeScreenInterf
         mPresenter.startPlayActivity();
     }
 
+    @OnClick(R.id.help_button)
+    public void onHelpClick(View view) {
+        mPresenter.startHelpActivity();
+    }
+
+    @OnClick(R.id.settings_button)
+    public void onSettingsClick(View view) {
+        mPresenter.startSettingsActivity();
+    }
+
 }

@@ -1,15 +1,10 @@
 package org.sdc.ttu.sdc_test_game_app.Login;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.EditText;
-import org.sdc.ttu.sdc_test_game_app.BaseActivity;
-import org.sdc.ttu.sdc_test_game_app.HomeScreen.HomeScreenActivity;
 import org.sdc.ttu.sdc_test_game_app.R;
 import butterknife.BindString;
 import butterknife.BindView;
